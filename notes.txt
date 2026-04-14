@@ -1,3 +1,8 @@
 changes made to dual_use analysis: 
 1 - pull data from duplicates_result instead (cleaned data)
 2 - updated military_only list of items
+
+changes made to cleaning.py:
+1 - turned the previous function to standardize ban and restriction 0 or 1 values to comment for now (disabled)
+
+created the merge_agr_info file to merge with amcdata_weapons_facilities_V2_WIP
