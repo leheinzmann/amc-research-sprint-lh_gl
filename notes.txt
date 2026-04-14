@@ -1,0 +1,3 @@
+changes made to dual_use analysis: 
+1 - pull data from duplicates_result instead (cleaned data)
+2 - updated military_only list of items

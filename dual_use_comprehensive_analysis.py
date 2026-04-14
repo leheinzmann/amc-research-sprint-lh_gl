@@ -15,11 +15,11 @@ warnings.filterwarnings('ignore')
 print("=== DUAL-USE TECHNOLOGY GOVERNANCE ANALYSIS ===\n")
 
 # Load main weapons_facilities dataset
-weapons_df = pd.read_csv('/home/claude/amc-research-sprint-master/data/amcdata_weapons_facilities_V2.csv')
+weapons_df = pd.read_csv('/workspaces/amc-research-sprint-lh_gl/duplicates_result.csv')
 
 # Try to load agreement_info with different encoding
 try:
-    agreement_info = pd.read_csv('/home/claude/amc-research-sprint-master/data/amcdata_agreement_info_V2.csv', encoding='latin-1')
+    agreement_info = pd.read_csv('/workspaces/amc-research-sprint-lh_gl/data/amcdata_agreement_info_V2.csv', encoding='latin-1')
     print("Successfully loaded agreement_info dataset")
 except:
     print("Note: Could not load agreement_info dataset, proceeding with weapons_facilities only")
@@ -67,7 +67,37 @@ def classify_dual_use_potential(item_text, weapon_definition=None):
     # Military-only indicators
     military_only = [
         'nuclear weapon', 'warhead', 'bomb', 'explosive device',
-        'icbm', 'slbm', 'heavy bomber', 'small arms'
+        'icbm', 'slbm', 'heavy bomber', 'small arms', 'weapons','weapon',
+        'missile',
+        'missiles',
+        'munition',
+        'icbms',
+        'icbm',
+        'slbms',
+        'abm',
+        'asbm',
+        'war',
+        'warhead',
+        'warheads',
+        'mine',
+        'mines',
+        'bomber',
+        'tank',
+        'combat',
+        'attack',
+        'warship',
+        'booby trap',
+        'artillery',
+        'heavy cruiser',
+        'light cruiser',
+        'destroyer',
+        'firearm',
+        'ammunition',
+        'gun',
+        'guns',
+        'armed forces',
+        'air force',
+        'navy'
     ]
     
     # Check categories
