@@ -6,3 +6,51 @@ changes made to cleaning.py:
 1 - turned the previous function to standardize ban and restriction 0 or 1 values to comment for now (disabled)
 
 created the merge_agr_info file to merge with amcdata_weapons_facilities_V2_WIP
+
+
+Tuesday:
+1) Merged cleaning and dual_use_classification into main.ipynb
+2) Merged the merging code into main.ipynb
+3) Started mergin analysis files 
+    Issues:
+    - Since the mergedresults.csv contains more than one row per weapon to keep all different agreements, it messes with the analysis
+    Fix:
+    - Generates the duplicates_result.csv before splitting the agreement_ids and uses this file for analysis of dual-use weapons
+    - For agreement analysis, we can use the mergedresults.csv, which is split by agreement (note: the same weapon will appear multiple times if it's regulated by more than one agreement)
+    Issue:
+    - duplicates_result.csv is not keeping only a single entry per weapon
+    Fix:
+    - there was a mixup in the order of the code, I've fixed it
+    Issue:
+    >>>>>> - the analysis by lifecycle only accounts for restrictions, not bans <<<<<<<<<<<
+    Fix:
+    - it's actually in step 4
+4) Merged dual_use_comprehensive_analysis.py
+5) Merged dual_use_visualizations.py
+6) Started mergin exploratory_data_analysis.ipynb
+    Issues:
+    - Since now I'm using the duplicates_result.csv, some rows had been dropped
+        'eliminitation',             # note: typo in the dataset
+        'conversion',
+        'modernization',
+        'facility_destruction'
+    Fix: 
+    - Added them back to the list of cols_to_keep in main.ipynb
+7) Merged exploratory_data_analysis.ipynb
+8) Merged facilities_analysis.ipynb
+9) Started mergin generic_code_analysis_dualuse_dataset_mergedwith_agreements.ipynb
+    Issues:
+    - the mergedresults.csv is not incorporating the dual_use columnns
+    Fix:
+    - Added these columns to main.ipynb cols_to_keep:
+        'weapon_category',
+        'dual_use',
+        'rationale'
+    Issue:
+    - the analysis was looking at all treaties, not only the region-specific ones
+    Fix:
+    - added another if condition to the code in main.ipynb
+    Issue:
+    >>>>>> - Analysis by region seems to return weird values, check if it matches the actual data (eg. all ban values are 0 in the treaty-strenght analysis) <<<<<<
+    >>>>>> - Graph of regulatory density doesn't make sense, switch frequency for the item name?
+    >>>>>> - Stopped in correlation analysis (all values were returning as NaN)

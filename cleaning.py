@@ -4,17 +4,12 @@ import re
 
 df = pd.read_csv("/workspaces/amc-research-sprint-lh_gl/data/amcdata_weapons_facilities_V2.csv")
 
-# clean extra spaces and capitalize
-df['item'] = df['item'].str.strip().str.capitalize()
-
-# delete all rows where item is 
+# clean item's names
+df['item'] = df['item'].str.strip().str.lower()
 df = df[df['item'].notna() & (df['item'] != '')]
-
-# clean plurals
+df['item'] = df['item'].str.replace(',', " ")
 df['item'] = df['item'].str.replace(r's$', '', regex=True)
-
-# clean 99 and N/A values
-df.replace(['99', np.nan], '', inplace=True)
+df = df[df['summary_category'] != 1]
 
 colunas_alvo = [
     'ban_development',
@@ -90,4 +85,4 @@ df['agreement_id'] = df['agreement_id'].str.split(';')
 df_exploded = df.explode('agreement_id')
 df_exploded['agreement_id'] = df_exploded['agreement_id'].str.strip()
 
-df_exploded.to_excel('duplicates_result.xlsx', index=False)
+df_exploded.to_csv('duplicates_result.csv', index=False)

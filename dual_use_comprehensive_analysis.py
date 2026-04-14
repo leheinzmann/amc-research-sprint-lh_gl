@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 print("=== DUAL-USE TECHNOLOGY GOVERNANCE ANALYSIS ===\n")
 
 # Load main weapons_facilities dataset
-weapons_df = pd.read_csv('/workspaces/amc-research-sprint-lh_gl/duplicates_result.csv')
+weapons_df = pd.read_csv('/workspaces/amc-research-sprint-lh_gl/mergedresults.csv')
 
 # Try to load agreement_info with different encoding
 try:
@@ -31,13 +31,13 @@ weapons_df['item_clean'] = weapons_df['item'].str.strip()
 print("STEP 1: IDENTIFYING POTENTIAL DUAL-USE TECHNOLOGIES")
 print("=" * 60)
 
-# Identify potential dual-use technologies based on known patterns
-dual_use_keywords = [
-    'enrichment', 'uranium', 'plutonium', 'centrifuge', 'reactor',
-    'chemical', 'precursor', 'biological', 'missile', 'rocket', 'launcher', 
-    'satellite', 'delivery', 'computer', 'software', 'technology',
-    'equipment', 'material', 'component'
-]
+# # Identify potential dual-use technologies based on known patterns
+# dual_use_keywords = [
+#     'enrichment', 'uranium', 'plutonium', 'centrifuge', 'reactor',
+#     'chemical', 'precursor', 'biological', 'missile', 'rocket', 'launcher', 
+#     'satellite', 'delivery', 'computer', 'software', 'technology',
+#     'equipment', 'material', 'component'
+# ]
 
 # Create a more sophisticated dual-use classification
 def classify_dual_use_potential(item_text, weapon_definition=None):
