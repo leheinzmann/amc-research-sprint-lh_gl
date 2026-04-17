@@ -54,3 +54,38 @@ Tuesday:
     >>>>>> - Analysis by region seems to return weird values, check if it matches the actual data (eg. all ban values are 0 in the treaty-strenght analysis) <<<<<<
     >>>>>> - Graph of regulatory density doesn't make sense, switch frequency for the item name?
     >>>>>> - Stopped in correlation analysis (all values were returning as NaN)
+
+10) Lee: I'm not sure we should keep two different datasets for different kinds of analysis.
+    I'd argue it's better to keep a single dataset that is as complete as possible (after cleaning), and that each analysis filters out what's needed.
+    Reason: (1) if we need to do any sort of quality control on the data (e.g. manually classifying double-use objs), working with one file is easier.
+    (2) We cannot afford to lose accidentally lose information when modifying/merging/analyzing csv files
+    (3) It's easier to select relevant columns/items per analysis, instead of having to worry whether the csv file has what we need or not
+
+11) Lee: It's impossible to work with just one dataset. This being said, here is what I did based on Leticia's previous code:
+    1. Started building a pipeline. The idea is that we start with the original, horrible .csv files, then:
+    2. Cleaned the original .csv files based on Leticia's code + some adjustments. I did not filter out any columns yet.
+        Resulting new folder: cleaned_data.csv
+        Resulting new files: weapons_cleaned.csv and agreements cleaned.csv
+        Obs: I have completely changed the name of the cols! Please refer to the code to see the new, much less confusing names
+    3. Extracted unique items from the cleaned weapons file and converted them into a csv file containing a col for the item (one row per unique item) and another for its description (combining all available descriptions of a given item)
+        Resulting new file: unique_weapon_items_combined_description.csv
+    4. This file is then fed to LLM models
+    5. The results should be uploaded to github and names accordingly, e.g.: cleaned_data/claude_classification.csv
+    6. Every output from the LLMs is then combined into a .csv file:
+        Resulting new file (we dont have it yet): cleaned_data/weapon_items_with_dual_use_labels.csv
+        Obs: we can just use the .csv file Leticia manually generated and quality-controlled, we just have to change the code a bit (filename, cols)
+    To do:
+    7. Adapt Leticia's code to merge the labeled items (cleaned_data/weapon_items_with_dual_use_labels.csv) with our cleaned weapons dataset (weapons_cleaned)
+        Resulting file: weapons_cleaned_labeled.csv
+        Obs: Once we map the dual-use classification to weapons_cleaned, let us keep multiple rows for the same item, as in the original (the mapping should keep track of this).
+            For instance (cols here are: agreement id, weapon, dual-use): 213123 gun 0; 1245453 gun 0; 888 gun 0
+        Obs: We should not filter columns yet
+    8. Adapt Leticia's code to merge weapons_cleaned_labeled.csv with our agreements (cleaned_data/agreements_cleaned.csv).
+        Again, the mapping should not combine more than one weapon_item into one row
+        Resulting file: weapons_merged_agreements_dualuse.csv
+    9. Plug in the code we have for analysis
+        Obs: this is where we can filter out the columns we want to use in each analysis.
+            For instance: 1. Load weapons_merged_agreements_dualuse.csv; 2. Select relevant columns or combine unique weapon_items; 3. Proceed with the analysis; 4. Only then generate new file with results
+    
+    Please, let me know if you agree! xoxo
+
