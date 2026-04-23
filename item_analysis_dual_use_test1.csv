@@ -1,0 +1,15 @@
+item,ban_intensity,restriction_intensity
+toxin,0.0,0.625
+microbial/other biological agent,0.0,0.625
+schedule 2 chemical,0.0,0.625
+schedule 3 chemical,0.0,0.625
+fissile material,0.0,0.375
+(category 2) arms and ammunition capable of use both for military and other purpose,0.0,0.25
+category iv(aircrafts and aircrafts compenents),0.0,0.25
+explosive,0.0,0.25
+aircrafts (incl. their parts and engines),0.0,0.25
+dual-use goods and technologie,0.0,0.125
+nuclear material,0.0,0.125
+space launch vehicle,0.0,0.125
+instruments for use on aircraft (incl. wireless apparatus and photographic or cinematographic apparatus),0.0,0.0
+laser,0.0,0.0
