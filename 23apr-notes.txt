@@ -1,0 +1,11 @@
+23 Apr - Notes of progress
+
+Changed columns ban_possession to ban_possession_general since this is the equivalent of other ban columns we have been analyzing (see Codebook)
+Added columns ban_possession_non_deployed and ban_possession_deployed since they are the same as ban_possession_general but for deployed vs non-deployed weapons
+Same for restriction possession
+Re-run of the weapons list through LLMs to find the dual-use ones
+Ignored Grok since it had been the most inconsistent the last time
+ChatGPT ran out of credits in the first message, generating a partially filled file where all dual_use_label were filled with 0
+Compared the results of the three LLMs (Gemini, Claude, DeepSeek), solidified answers where there was only 1 disagreement based on a majority rule (two 1s overwrite one 0 and vice-versa), then reviewed the disagreements manually for accuracy.
+Uploaded this new list to GitHub as llm_dualuse_classification.csv
+It gave an error, saying there are no equivalent values between the unique_list of weapons file, and this new classification. Couldn’t solve it

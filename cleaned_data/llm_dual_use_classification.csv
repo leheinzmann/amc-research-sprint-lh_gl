@@ -1,0 +1,218 @@
+﻿weapon_item;dual_use_label
+(category 1) arms ammunition and implements of war exclusively designed and intended for land sea and aerial warfare;0
+(category 2) arms and ammunition capable of use both for military and other purpose;1
+(category 3) vessels of war and their armament;0
+10.5 gun;0
+7.7 gun;0
+abm interceptor missile;0
+abm interceptor missiles (destruction procedures only);0
+abm lauchers (destruction procedures only);0
+abm launcher;0
+abm radar;0
+abm radar complexes (destruction procedures only);0
+abm radars (destruction procedures only);0
+aicrafts not intially constructed as bombers (8000 km+ range);0
+aicrafts other than airplanes (8000 km+ range);0
+air defense component;1
+air defense radar;1
+air force;0
+air-delivered incendiary weapon;0
+aircraft;1
+aircraft carrier;0
+aircrafts (incl. their parts and engines);1
+ammunition;0
+ammunition and component;0
+ammunition of any nature (loaded or unloaded);0
+ammunition/munition;0
+anti-personel mines other than remotely delivered mine;0
+anti-personnel mine;0
+armoured cars tanks and similiar construction;0
+armoured combat vehicle;0
+arms of war;0
+artillery;0
+asbm;0
+asbms equipped with mirv;0
+asphyxiating poisonous or other gases and all analogous liquid;1
+attack helicopter;0
+automatic or semi-automatic rapid reload systems for abm launcher;0
+auxiliary cruisers and fleet auxiliarie;0
+bacteriological methods of warfare;0
+ballistic missile;0
+ballistic missile flight test;0
+ballistic missile submarine;0
+battle tank;0
+battleship;0
+biological weapon;0
+booby trap;0
+capital ship;0
+capital ships a;0
+capital ships b;0
+carbine;0
+category iv(aircrafts and aircrafts compenents);1
+category v(gunpowder and explosives other);1
+certain booby trap;0
+chemical weapon;0
+chemical weapons munitions devices and container;0
+chemical weapons storage facilitie;0
+cluster munition;0
+combat aircraft;0
+compositions destined exclusively for the manufacture of ammunition;1
+conventional weapon;0
+cruise missile;0
+destroyer;0
+dirigible;1
+dual-use goods and technologie;1
+early warning radar;1
+explosive;1
+explosive ordnance;0
+explosive projectile;0
+explosive reminants of war;0
+firearm;0
+fissile material;1
+fixed icbm launcher;0
+fixed structures for rail mobile launchers of icbm;0
+former heavy bomber;0
+fortification;0
+german armed force;0
+gun cotton;1
+heavy bomber;0
+heavy bomber aircraft;0
+heavy bomber nuclear armaments/warhead;0
+heavy bombers equipped for non-nuclear armament;0
+heavy bombers equipped for nuclear armaments other than long-range nuclear alcm;0
+heavy cruiser;0
+heavy icbm;0
+heavy icbm launcher;0
+heavy machine gun;0
+heavy slbm;0
+high-priced arm;0
+high-priced arms ammunition;0
+icbm;0
+icbm equipped with mirv;0
+icbm launcher;0
+icbm silo launcher;0
+icbm test/training launcher;0
+icbm warhead;0
+icbms equipped with mirv;0
+icbms for mobile launchers of icbm;0
+icbms of a retired or former type;0
+incendiary weapon;0
+instruments for use on aircraft (incl. wireless apparatus and photographic or cinematographic apparatus);1
+intermediate-range missile;0
+intermediate-range missile launcher;0
+irm support equipment;0
+irm support structure;0
+large calibre artillery system;0
+laser;1
+laser weapon;0
+launchers for icbms equipped with mirv;0
+launchers for icbms of older types deployed prior to 1964;0
+launchers for light icbm;0
+launchers for slbms equipped with mirv;0
+launchers of ballistic missile;0
+launchers of heavy slbm;0
+launchers of light icbms (or icbms of older types deployed prior to 1964);0
+light cruiser;0
+light machine gun;0
+light surface vessel;1
+light trench mortar;0
+long-range nuclear alcm;0
+medium trench mortar;0
+merchant ship;0
+microbial/other biological agent;1
+mine;0
+mines other than remotely delivered mine;0
+minesweeping vessel;0
+missiles and missile launcher;0
+mobile launchers of heavy icbm;0
+mobile launchers of prototype icbm;0
+nacelles and fuselage;1
+naval vessel;1
+navy;0
+new types of icbm;0
+nitroglycerin;1
+non-abm missiles launchers and radar;1
+non-abm system;0
+non-icbm land-based ballistic missile launcher;0
+nuclear explosive device;0
+nuclear explosive devise;0
+nuclear material;1
+nuclear test explosion;0
+nuclear weapon;0
+objects carrying nuclear weapon;0
+other devise;0
+other warship;0
+other weapons of mass destruction;0
+parts and component;1
+parts of gun;0
+personel/equipment of armed force;0
+phased array radars(3m+);1
+phased array radars(3m-);1
+powder;1
+prototype icbm;0
+prototype slbm;0
+radioactive waste;1
+rail mobile launchers of icbm;0
+rapid reload system;0
+related material;1
+remotely delivered mine;0
+rifle;0
+rounds for 10.5 gun;0
+rounds for 7.7 gun;0
+rounds for light and heavy machine gun;0
+rounds for light trench mortar;0
+rounds for medium trench mortar;0
+rounds for rifles and carbine;0
+saltpeter;1
+schedule 1 chemical;0
+schedule 2 chemical;1
+schedule 3 chemical;1
+ship;1
+shorter-range missile;0
+shorter-range missile launcher;0
+silo launchers of heavy icbm;0
+silo launchers of icbm;0
+silo training launcher;0
+silos used as a launch control center;0
+slbm;0
+slbm equipped with mirv;0
+slbm launcher;0
+slbm test/training launcher;0
+slbm warhead;0
+slbms of a retired or former type;0
+small arms and light weapon;0
+soft site launcher;0
+space launch vehicle;1
+space-based interseptor missiles other than strategic ballistic missile;0
+sporting arm;1
+sporting arms ammunition;1
+srm support equipment;0
+strategic nuclear warhead;0
+strategic offensive arm;0
+submarine;0
+submarines (and related vessels and docks);0
+surface vessel;1
+systems for placing nuclear weapons into earth orbit;0
+systems for rapid reload of icbm launcher;0
+test heavy bomber;0
+test launcher;0
+test launchers of icbm;0
+test launchers of slbm;0
+theater missile defence system;0
+torpedo boat;0
+toxin;1
+training heavy bomber;0
+transporter loader;1
+vessels of war;0
+vessels of war other than a captial ship or arcraft carrier;0
+warheads attributed to deployed heavy bomber;0
+warheads attributed to deployed icbms and deployed slbm;0
+warheads attributed to deployed icbms on mobile launchers of icbm;0
+warheads attributed to heavy bomber;0
+warheads attributed to icbm;0
+warheads attributed to slbm;0
+warship;0
+weapons and equipment and means of delivery for agreement-restricted toxins and agent;0
+weapons general;0
+weapons of mass destruction;0
+weapons with the primary effect to injure by non-detectable fragment;0
