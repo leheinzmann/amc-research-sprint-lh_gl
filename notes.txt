@@ -116,3 +116,5 @@ Tuesday:
     (4) READY TO TRY TO PERFORM DATA ANALYSIS on weapons_agreements_cleaned_labeled.csv
     (5) I moved some loose functions to the end of the file, because I don't know if we're gonna need them in the future
     (6) I'll try to push my changed into my branch (~22:00)
+    (7) Started to edit analysis-main.ipynb but got super tired. I think it'll work.
+        Discuss: I'm not sure I like the LLM's suggestion to classify dual-use items according to their "potential". Do we keep that?
