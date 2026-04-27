@@ -64,13 +64,13 @@ Tuesday:
 11) Lee: It's impossible to work with just one dataset. This being said, here is what I did based on Leticia's previous code:
     1. Started building a pipeline. The idea is that we start with the original, horrible .csv files, then:
     2. Cleaned the original .csv files based on Leticia's code + some adjustments. I did not filter out any columns yet.
-        Resulting new folder: cleaned_data.csv
+        Resulting new folder: cleaned_data
         Resulting new files: weapons_cleaned.csv and agreements cleaned.csv
         Obs: I have completely changed the name of the cols! Please refer to the code to see the new, much less confusing names
-    3. Extracted unique items from the cleaned weapons file and converted them into a csv file containing a col for the item (one row per unique item) and another for its description (combining all available descriptions of a given item)
+    3. Extracted unique items from the weapons_cleaned.csv file and converted them into a new csv file containing a col for the item (one row per unique item) and another for its description (combining all available descriptions of a given item)
         Resulting new file: unique_weapon_items_combined_description.csv
     4. This file is then fed to LLM models
-    5. The results should be uploaded to github and names accordingly, e.g.: cleaned_data/claude_classification.csv
+    5. The results of each prompt should be uploaded to github and named accordingly, e.g.: cleaned_data/claude_classification.csv; cleaned_data/grok_classification.csv
     6. Every output from the LLMs is then combined into a .csv file:
         Resulting new file (we dont have it yet): cleaned_data/weapon_items_with_dual_use_labels.csv
         Obs: we can just use the .csv file Leticia manually generated and quality-controlled, we just have to change the code a bit (filename, cols)
@@ -89,3 +89,30 @@ Tuesday:
     
     Please, let me know if you agree! xoxo
 
+12) Leticia (23 Apr):
+    Changed columns ban_possession to ban_possession_general since this is the equivalent of other ban columns we have been analyzing (see Codebook)
+    Added columns ban_possession_non_deployed and ban_possession_deployed since they are the same as ban_possession_general but for deployed vs non-deployed weapons
+    Same for restriction possession
+    Re-run of the weapons list through LLMs to find the dual-use ones
+    Ignored Grok since it had been the most inconsistent the last time
+    ChatGPT ran out of credits in the first message, generating a partially filled file where all dual_use_label were filled with 0
+    Compared the results of the three LLMs (Gemini, Claude, DeepSeek), solidified answers where there was only 1 disagreement based on a majority rule (two 1s overwrite one 0 and vice-versa), then reviewed the disagreements manually for accuracy.
+    Uploaded this new list to GitHub as llm_dualuse_classification.csv
+    It gave an error, saying there are no equivalent values between the unique_list of weapons file, and this new classification. Couldn’t solve it
+
+13) Lee (26 Apr):
+    (1) Changed the code to read just one .csv file provided by Leticia, instead of one .csv file for each LLM model used to classify the items.
+    Her file was named "llm_dualuse_classification.csv".
+    (2) Fixed an issue where weapons_cleaned.csv replaced "," with " "; now it replaces the comma with ""
+    (3) main.ipynb can now read Leticia's llm_dual_use_classification.csv and merge it with unique_weapon_items_combined_descriptions.csv
+    (4) Merged this dataframe with weapons_cleaned.csv
+        Resulting file: weapons_cleaned_labeled.csv
+    
+    (27 Apr):
+    (1) Merged weapons_cleaned_labeled with agreements_cleaned
+        Resulting file: weapons_agreements_cleaned_labeled.csv
+    (2) I (Claude) fixed so many bugs, I wanna die
+    (3) The Jupyter Notebook main.ipynb can now load and clean the datasets; + added the dual_use classification
+    (4) READY TO TRY TO PERFORM DATA ANALYSIS on weapons_agreements_cleaned_labeled.csv
+    (5) I moved some loose functions to the end of the file, because I don't know if we're gonna need them in the future
+    (6) I'll try to push my changed into my branch (~22:00)
